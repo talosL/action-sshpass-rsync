@@ -27,10 +27,10 @@ inputs:
     description: 'Remote destination'
     required: false
     default: '~/'
-  runBeforeDeployment:
+  runBefore:
     description: "Commands that shall be executed before deployment"
     required: false
-  runAfterDeployment:
+  runAfter:
     description: "Commands that shall be executed after deployment"
     required: false
 
@@ -50,5 +50,5 @@ runs:
     LOCAL: ${{ inputs.local }}
     EXTRA: ${{ inputs.extra }}
     REMOTE: ${{ inputs.remote }}
-    RUNBEFORE: ${{ inputs.runBeforeDeployment }}
-    RUNAFTER: ${{ inputs.runAfterDeployment }}
+    RUNBEFORE: ${{ inputs.runBefore }}
+    RUNAFTER: ${{ inputs.runAfter }}
